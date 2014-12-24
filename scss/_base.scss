@@ -24,8 +24,17 @@ p {
   font-size: rem(18);
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 .container {
   @include outer-container();
+  position: relative;
 }
 
 footer {

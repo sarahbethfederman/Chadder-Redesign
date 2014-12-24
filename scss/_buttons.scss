@@ -1,8 +1,10 @@
 .button {
   float: left;
+  clear: both;
   height: 20px;
   padding: 20px;
   margin-top: 30px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

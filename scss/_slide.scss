@@ -1,14 +1,16 @@
 .slide {
   @include row();
-  padding: 60px 0;
+  padding: 60px 10%;
   height: 575px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   &__title {
     @include span-columns(6);
+    margin-top: 0;
     font-size: rem(40);
     position: relative;
-    &:after {
+    &:after {   // decorative bars
       content: '';
       position: absolute;
       bottom: -20px;
@@ -22,26 +24,49 @@
   &__subtitle {
     font-size: rem(18);
     font-weight: 100;
+    margin-bottom: 60px;
   }
 
-  &__image {
-    height: 400px;
+  &__img {
+    position: absolute;
+    left: 60%;
+    height: 520px;
+    top: -80px;
   }
 
   &__content {
-    @include span-columns(4);
+    @include span-columns(6);
     clear: both;
     line-height: 1.8;
+    margin-bottom: 0;
   }
 
   &__column {
     @include span-columns(4);
+    padding: 0 2%;
     text-align: center;
+    position: relative;
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: -5%;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $grey;
+    }
     &__title {
-
+      font-size: rem(24);
     }
     &__content {
-
+      strong {
+        font-weight: 500;
+      }
     }
   }
 
@@ -75,12 +100,19 @@
   }
 
   &.right-align {
-    .slide__title, .slide__content {
+    .slide__title, .slide__content, .button {
       @include shift(6);
     }
   }
 
   &.center-align {
     text-align: center;
+    .slide__title {
+      @include span-columns(12);
+      line-height: .2;
+      &:after {
+        display: none;
+      }
+    }
   }
 }
