@@ -1,0 +1,18 @@
+$visual-grid: true !global;
+
+// import normalize
+@import "normalize";
+
+// import variables
+@import "variables";
+
+// import Boubon and Neat
+@import "bourbon", "neat";
+
+// base styles
+@import "base";
+
+// modules
+@import "slide";
+@import "buttons";
+@import "hero";

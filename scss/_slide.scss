@@ -1,0 +1,67 @@
+.slide {
+  @include row();
+  &__title {
+    font-size: rem(40);
+    position: relative;
+  }
+
+  &__subtitle {
+    font-size: rem(18);
+    font-weight: light;
+  }
+
+  &__content {
+
+  }
+
+  &__column {
+    @include span-columns(4);
+    text-align: center;
+    &__title {
+
+    }
+    &__content {
+
+    }
+  }
+
+  // color modifiers
+  &.white {
+    background-color: $white;
+    color: $black;
+  }
+  &.grey {
+    background-color: $grey;
+    color: $black;
+  }
+  &.black {
+    background-color: $black;
+  }
+  &.red {
+    background-color: $red;
+  }
+
+  // structural modifiers
+  &.small {
+
+  }
+
+  &.left-align,  &.right-align {
+    .slide__title {
+      @include span-columns(6);
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 10%;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+  }
+
+  &.center-align {
+    text-align: center;
+  }
+}

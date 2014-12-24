@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "museo", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "museo sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+.container {
+  @include outer-container();
+}
