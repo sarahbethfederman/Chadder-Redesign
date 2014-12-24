@@ -1,17 +1,37 @@
 .slide {
   @include row();
+  padding: 60px 0;
+  height: 575px;
+  display: flex;
+  align-items: center;
   &__title {
+    @include span-columns(6);
     font-size: rem(40);
     position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 10%;
+      height: 3px;
+      background-color: $black;
+    }
   }
 
   &__subtitle {
     font-size: rem(18);
-    font-weight: light;
+    font-weight: 100;
+  }
+
+  &__image {
+    height: 400px;
   }
 
   &__content {
-
+    @include span-columns(4);
+    clear: both;
+    line-height: 1.8;
   }
 
   &__column {
@@ -36,28 +56,27 @@
   }
   &.black {
     background-color: $black;
+    color: $white;
+    .slide__title:after {
+      background-color: $white;
+    }
   }
   &.red {
     background-color: $red;
+    color: $white;
+    .slide__title:after {
+      background-color: $white;
+    }
   }
 
   // structural modifiers
   &.small {
-
+    height: 495px;
   }
 
-  &.left-align,  &.right-align {
-    .slide__title {
-      @include span-columns(6);
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        width: 10%;
-        height: 3px;
-        background-color: #000;
-      }
+  &.right-align {
+    .slide__title, .slide__content {
+      @include shift(6);
     }
   }
 

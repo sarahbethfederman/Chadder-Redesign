@@ -19,6 +19,29 @@ h4 {
   font-weight: normal;
 }
 
+p {
+  font-weight: 100;
+  font-size: rem(18);
+}
+
 .container {
   @include outer-container();
+}
+
+footer {
+  @include row();
+  height: 100px;
+  background-color: $black;
+  font-size: rem(18);
+  color: $white;
+  font-weight: 100;
+  padding-top: 40px;
+  a {
+    color: $white;
+    text-decoration: none;
+    opacity: .7;
+  }
+  span {
+    @include span-columns(2);
+  }
 }
