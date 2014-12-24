@@ -28,13 +28,29 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 .container {
   @include outer-container();
   position: relative;
+}
+
+.quote {
+  @include row();
+  background-color: $black;
+  height: 130px;
+  color: $white;
+  text-align: center;
+  font-family: "museo sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: rem(18);
+  display: flex;
+  align-items: center;
+  blockquote {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
 }
 
 footer {
@@ -45,6 +61,7 @@ footer {
   color: $white;
   font-weight: 100;
   padding-top: 40px;
+  padding-left: 10%;
   a {
     color: $white;
     text-decoration: none;

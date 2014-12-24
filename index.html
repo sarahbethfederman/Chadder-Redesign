@@ -7,25 +7,33 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="nav-bar">
+    <span id="top">
     <div class="container">
       <div class="announcement"></div>
-      <a class="logo" href="#"></a>
-      <nav class="nav">
-        <ul>
-          <li><a href="#features">About Chadder</li>
-            <li><a href="#about">Who We Are</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a class="button" href="#download">Download</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul class="nav">
+          <li><a href="#top"><img class="logo" src="img/logo.svg" alt="Chadder"></a></li>
+          <li><a href="#features">About Chadder</a></li>
+          <li><a href="#about">Who We Are</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="button red" href="#download">Download</a></li>
+        </ul>
+      </nav>
     </div>
-  <header>
+  </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Stand up for your privacy!</h1>
+        <h1><span class="small-line">Stand up for</span><br> your <span class="red">privacy</span></h1>
+      </div>
+      <video class="vid-bg" src="img/bg.mp4" autoplay loop />
+    </section>
+
+    <section class="quote">
+      <div class="container">
+        <blockquote>"I use Chadder everyday with the trust that all of my informations and communication is, in fact, truly private." - John McAfee</blockquote>
       </div>
     </section>
 
@@ -72,6 +80,7 @@
 
     <section class="slide right-align grey">
       <div class="container">
+        <img class="slide__img clock" src="img/clock.png" alt="timebomb">
         <h2 class="slide__title">Disappearing<br>Messages</h2>
         <p class="slide__content">
           <em>Ghosts shouldn't come back to haunt you.</em> Our Ghosting feature does what it says, securely and reliably.
@@ -83,6 +92,7 @@
 
     <section class="slide left-align red">
       <div class="container">
+        <img class="slide__img phones" src="img/phones.png" alt="phones">
         <h2 class="slide__title">Automatic<br>Syncing &amp; Updates</h2>
         <p class="slide__content">
           Login once and all of your devices will recieve incoming messages and communication, so you can stay updated
@@ -94,10 +104,13 @@
 
     <section class="slide right-align white">
       <div class="container">
+        <img class="slide__img man" src="img/man-phone.png" alt="man holding phone">
         <h2 class="slide__title">Your Chats,<br>Your Control</h2>
         <p class="slide__content">
-
+          You decide when your message gets deleted. And when you do, we'll make sure it's deleted permanently, from everywhere.
+          Including wherever you sent it. Nothing is saved without your permission.
         </p>
+        <a class="button red">Get Started</a>
       </div>
     </section>
   </main>
