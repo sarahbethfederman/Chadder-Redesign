@@ -647,21 +647,42 @@ footer {
     font-weight: 100;
     text-shadow: 0 0 10px #111; }
 
-h1 {
-  font-size: 3.25rem;
-  line-height: 1;
-  color: #eee; }
-
 .small-line {
   font-size: 2.5rem; }
 
 .hero {
+  display: block;
   height: 530px;
   position: relative;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6); }
+  .hero:after {
+    content: "";
+    display: table;
+    clear: both; }
   .hero .red {
     color: #f13a21; }
+  .hero .container {
+    max-width: 60%;
+    min-height: 100%; }
+  .hero__title {
+    font-size: 3.25rem;
+    line-height: 1;
+    color: #eee; }
+  .hero__subtitle {
+    text-transform: none;
+    color: #FFF;
+    font-family: "museo", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem; }
+  .hero__content {
+    position: absolute;
+    bottom: 0;
+    left: 40%; }
+  .hero__img {
+    width: 275px;
+    position: absolute;
+    bottom: -40%; }
 
 .vid-bg {
   position: absolute;

@@ -1,14 +1,11 @@
-h1 {
-  font-size: rem(52);
-  line-height: 1;
-  color: $grey;
-}
+
 
 .small-line {
   font-size: rem(40);
 }
 
 .hero {
+  @include row();
   height: 530px;
   position: relative;
   overflow: hidden;
@@ -16,7 +13,34 @@ h1 {
   .red {
     color: $red;
   }
+  .container {
+    max-width: 60%;
+    min-height: 100%;
+  }
+  &__title {
+    font-size: rem(52);
+    line-height: 1;
+    color: $grey;
+  }
+  &__subtitle {
+    text-transform: none;
+    color: $white;
+    font-family: "museo", sans-serif;
+    font-weight: 500;
+    font-size: rem(18);
+  }
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+  }
+  &__img {
+    width: 275px;
+    position: absolute;
+    bottom: -40%;
+  }
 }
+
 
 .vid-bg {
   position: absolute;
