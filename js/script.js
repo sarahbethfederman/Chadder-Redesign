@@ -2,50 +2,26 @@
 (function () {
   var $window = $(window); // cache window object
 
-  var navEffect = {         // sliding nav bar effect module
-    '$navBar': undefined,
-    '$logo': undefined,
-    'isFixed': false,
-    'fixNav': function() {
-      if (!this.isFixed) {
-        this.$navBar.css({
-        }).animate({
-          'top': 0,
-          'left': 0,
-          'height': '50px',
-          'backgroundColor': 'white'
-        });
+  var navEffect = function($navBar) {
+    var isFixed = false;
 
-        this.isFixed = true;
-      }
-    },
-    'unFixNav': function() {
-      if (this.isFixed) {
-        this.$navBar.css({
-          'float': 'left'
-        }).animate({
-          'backgroundColor': 'transparent',
-          'height': '100px'
-        });
-
-        this.isFixed = false;
-      }
-    },
-    'init': function() {
-      var self = this;
-
-      // hook up logo
-      this.$logo = this.$navBar.find('#logo');
-
-      // bind scroll event
-      $window.scroll(function() {
-        if ($window.scrollTop() > 100) {
-          self.fixNav();
-        } else {
-          self.unFixNav();
-        }
-      });
+    function fixNav() {
+      $navBar.toggleClass('is-fixed');
+      isFixed = !isFixed;
     }
+
+    // bind scroll event
+    $window.scroll(function() {
+      if ($window.scrollTop() > 100) {
+        if (!isFixed) {
+          fixNav();
+        }
+      } else {
+        if (isFixed) {
+          fixNav();
+        }
+      }
+    });
   };
 
   var smoothScroll = function() {       // smooth scroll from CSS-Tricks
@@ -69,10 +45,7 @@
     smoothScroll();
 
     // hook up DOM elements
-    navEffect.$navBar = $('.nav-bar');
-
-    // init modules
-    navEffect.init();
+    navEffect($('.nav-bar'));
   });
 
 })();

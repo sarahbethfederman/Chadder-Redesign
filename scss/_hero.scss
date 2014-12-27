@@ -22,6 +22,9 @@
     font-size: rem(52);
     line-height: 1;
     color: $grey;
+    &::first-line {
+      font-size: rem(40);
+    }
   }
   &__subtitle {
     text-transform: none;
@@ -40,16 +43,14 @@
     position: absolute;
     bottom: -40%;
   }
-}
-
-
-.vid-bg {
-  position: absolute;
-  min-width: 100%;
-  height: auto;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: .9;
+  &__background {
+    position: absolute;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .9;
+  }
 }

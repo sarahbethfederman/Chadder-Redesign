@@ -26,6 +26,11 @@ p {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+  transition: all .2s linear;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .container {
