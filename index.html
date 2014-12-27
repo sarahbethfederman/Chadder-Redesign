@@ -7,11 +7,11 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  <span id="top"></span>
+  <div class="announcement"></div>
+
   <header class="nav-bar">
-    <span id="top">
-    <div class="container">
-      <div class="announcement"></div>
-      <nav>
+      <nav class="container">
         <ul class="nav">
           <li><a href="#top"><img class="logo" src="img/logo.svg" alt="Chadder"></a></li>
           <li><a href="#features">About Chadder</a></li>
@@ -20,7 +20,6 @@
           <li><a class="button red" href="#download">Download</a></li>
         </ul>
       </nav>
-    </div>
   </header>
 
   <main>
@@ -32,6 +31,10 @@
           <h2 class="hero__subtitle">
             Chadder is a modern messaging app, built with your interests at heart
           </h2>
+          <div class="hero__download">
+            <h3>Download:</h3>
+
+          </div>
         </div>
       </div>
       <video class="vid-bg" src="img/bg.mp4" autoplay loop />
@@ -45,7 +48,7 @@
 
     <section id="features" class="slide white center-align">
       <div class="container">
-        <h2 class="slide__title">Share Your Story -- Securely</h2>
+        <h2 class="slide__title">Share Your Story &mdash; Securely</h2>
         <h4 class="slide__subtitle">Say what you want, we can't see it anyway!</h4>
 
         <div class="slide__column">
@@ -139,7 +142,11 @@
       <span><a href="#">Privacy Policy</a></span>
     </div>
   </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-color.js"></script>
+
   <script src="js/script.js"></script>
 </body>
 </html>
