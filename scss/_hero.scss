@@ -22,6 +22,7 @@
     font-size: rem(52);
     text-shadow: 0 0 6px #111;
     line-height: 1;
+    margin-bottom: 0;
     color: $grey;
     &::first-line {
       font-size: rem(40);
@@ -33,6 +34,7 @@
     font-family: "museo", sans-serif;
     font-weight: 500;
     font-size: rem(18);
+    margin-bottom: 30px;
   }
   &__content {
     position: absolute;
@@ -53,5 +55,15 @@
     left: 0;
     z-index: -1;
     opacity: .9;
+  }
+  &__CTA__title {
+    text-transform: none;
+    color: $white;
+    font-weight: 700;
+    font-size: rem(14);
+  }
+  .button {
+    margin-right: 15px;
+    margin-bottom: 30px;
   }
 }

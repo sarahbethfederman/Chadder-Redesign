@@ -78,6 +78,7 @@
       margin-bottom: 15px;
     }
     &__content {
+      @include clearfix;
       strong {
         font-weight: 500;
       }
@@ -107,6 +108,12 @@
     .slide__title:after {
       background-color: $white;
     }
+    .button {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
   }
   &.red {
     background-color: $red;
@@ -119,6 +126,12 @@
   // structural modifiers
   &.small {
     height: 495px;
+    .slide__title {
+      font-size: rem(24);
+      &:after {
+        display: none;
+      }
+    }
   }
 
   &.right-align {

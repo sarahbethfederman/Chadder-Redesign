@@ -13,7 +13,7 @@ body {
 h1, h2, h3 {
   font-family: "museo sans", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h4 {
@@ -58,5 +58,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     float: none;
+  }
+  &__author {
+    font-weight: 500;
   }
 }

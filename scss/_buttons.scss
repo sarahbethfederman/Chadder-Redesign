@@ -1,16 +1,18 @@
 .button {
   float: left;
-  clear: both;
-  height: 20px;
   padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
   font-family: "museo sans", sans-serif;
   font-size: rem(14);
+  &.img {
+    padding: 3px;
+  }
+  & img {
+    height: 40px;
+  }
   &.red {
     background-color: $red;
     color: $white;
@@ -30,4 +32,11 @@
   &:hover {
     box-shadow: 0px 1px 2px $black;
   }
+}
+
+.slide .button, .nav-bar .button {
+  clear: both;
+  height: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }

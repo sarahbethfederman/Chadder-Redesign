@@ -380,7 +380,7 @@ body {
 h1, h2, h3 {
   font-family: "museo sans", sans-serif;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 500; }
 
 h4 {
   font-weight: normal; }
@@ -434,6 +434,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     float: none; }
+  .quote__author {
+    font-weight: 500; }
 
 .slide {
   display: block;
@@ -521,6 +523,10 @@ a {
     .slide__column__title {
       font-size: 1.5rem;
       margin-bottom: 15px; }
+    .slide__column__content:after {
+      content: "";
+      display: table;
+      clear: both; }
     .slide__column__content strong {
       font-weight: 500; }
     .slide__column__img {
@@ -540,6 +546,9 @@ a {
     color: #FFF; }
     .slide.black .slide__title:after {
       background-color: #FFF; }
+    .slide.black .button:hover {
+      background-color: #FFF;
+      color: #2a2a2a; }
   .slide.red {
     background-color: #f13a21;
     color: #FFF; }
@@ -547,6 +556,10 @@ a {
       background-color: #FFF; }
   .slide.small {
     height: 495px; }
+    .slide.small .slide__title {
+      font-size: 1.5rem; }
+      .slide.small .slide__title:after {
+        display: none; }
   .slide.right-align .slide__title, .slide.right-align .slide__content, .slide.right-align .button {
     margin-left: 51.178825799%; }
   .slide.center-align {
@@ -564,11 +577,7 @@ a {
 
 .button {
   float: left;
-  clear: both;
-  height: 20px;
   padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -581,6 +590,10 @@ a {
   border-radius: 4px;
   font-family: "museo sans", sans-serif;
   font-size: 0.875rem; }
+  .button.img {
+    padding: 3px; }
+  .button img {
+    height: 40px; }
   .button.red {
     background-color: #f13a21;
     color: #FFF; }
@@ -595,6 +608,12 @@ a {
       color: #2a2a2a; }
   .button:hover {
     box-shadow: 0px 1px 2px #2a2a2a; }
+
+.slide .button, .nav-bar .button {
+  clear: both;
+  height: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px; }
 
 .nav-bar {
   position: fixed;
@@ -685,6 +704,7 @@ a {
     font-size: 3.25rem;
     text-shadow: 0 0 6px #111;
     line-height: 1;
+    margin-bottom: 0;
     color: #eee; }
     .hero__title::first-line {
       font-size: 2.5rem; }
@@ -693,7 +713,8 @@ a {
     color: #FFF;
     font-family: "museo", sans-serif;
     font-weight: 500;
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    margin-bottom: 30px; }
   .hero__content {
     position: absolute;
     bottom: 0;
@@ -711,6 +732,14 @@ a {
     left: 0;
     z-index: -1;
     opacity: .9; }
+  .hero__CTA__title {
+    text-transform: none;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 0.875rem; }
+  .hero .button {
+    margin-right: 15px;
+    margin-bottom: 30px; }
 
 footer {
   display: block;
