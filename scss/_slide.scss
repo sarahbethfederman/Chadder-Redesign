@@ -71,15 +71,24 @@
       top: 0;
       height: 100%;
       width: 1px;
-      background-color: $grey;
+      background-color: darken($grey, 9%);
     }
     &__title {
       font-size: rem(24);
+      margin-bottom: 15px;
     }
     &__content {
       strong {
         font-weight: 500;
       }
+    }
+    &__img {
+      @extend %center;
+      max-width: 25%;
+      height: 100px;
+      display: block;
+      margin-bottom: 30px;
+      padding: 10px;
     }
   }
 

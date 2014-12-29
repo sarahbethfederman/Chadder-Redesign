@@ -20,6 +20,7 @@
   }
   &__title {
     font-size: rem(52);
+    text-shadow: 0 0 6px #111;
     line-height: 1;
     color: $grey;
     &::first-line {

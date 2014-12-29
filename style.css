@@ -366,23 +366,6 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-body:before {
-  content: '';
-  display: inline-block;
-  background-image: -webkit-linear-gradient(left, transparent 0, #EEE 0, #EEE 6.1721527019%, transparent 6.1721527019%, transparent 8.5298042998%, #EEE 8.5298042998%, #EEE 14.7019570017%, transparent 14.7019570017%, transparent 17.0596085997%, #EEE 17.0596085997%, #EEE 23.2317613015%, transparent 23.2317613015%, transparent 25.5894128995%, #EEE 25.5894128995%, #EEE 31.7615656014%, transparent 31.7615656014%, transparent 34.1192171993%, #EEE 34.1192171993%, #EEE 40.2913699012%, transparent 40.2913699012%, transparent 42.6490214991%, #EEE 42.6490214991%, #EEE 48.821174201%, transparent 48.821174201%, transparent 51.178825799%, #EEE 51.178825799%, #EEE 57.3509785009%, transparent 57.3509785009%, transparent 59.7086300988%, #EEE 59.7086300988%, #EEE 65.8807828007%, transparent 65.8807828007%, transparent 68.2384343986%, #EEE 68.2384343986%, #EEE 74.4105871005%, transparent 74.4105871005%, transparent 76.7682386985%, #EEE 76.7682386985%, #EEE 82.9403914003%, transparent 82.9403914003%, transparent 85.2980429983%, #EEE 85.2980429983%, #EEE 91.4701957002%, transparent 91.4701957002%, transparent 93.8278472981%, #EEE 93.8278472981%, #EEE 100.0%, transparent 100.0%);
-  background-image: -webkit-linear-gradient(right, transparent 0, #EEE 0, #EEE 6.1721527019%, transparent 6.1721527019%, transparent 8.5298042998%, #EEE 8.5298042998%, #EEE 14.7019570017%, transparent 14.7019570017%, transparent 17.0596085997%, #EEE 17.0596085997%, #EEE 23.2317613015%, transparent 23.2317613015%, transparent 25.5894128995%, #EEE 25.5894128995%, #EEE 31.7615656014%, transparent 31.7615656014%, transparent 34.1192171993%, #EEE 34.1192171993%, #EEE 40.2913699012%, transparent 40.2913699012%, transparent 42.6490214991%, #EEE 42.6490214991%, #EEE 48.821174201%, transparent 48.821174201%, transparent 51.178825799%, #EEE 51.178825799%, #EEE 57.3509785009%, transparent 57.3509785009%, transparent 59.7086300988%, #EEE 59.7086300988%, #EEE 65.8807828007%, transparent 65.8807828007%, transparent 68.2384343986%, #EEE 68.2384343986%, #EEE 74.4105871005%, transparent 74.4105871005%, transparent 76.7682386985%, #EEE 76.7682386985%, #EEE 82.9403914003%, transparent 82.9403914003%, transparent 85.2980429983%, #EEE 85.2980429983%, #EEE 91.4701957002%, transparent 91.4701957002%, transparent 93.8278472981%, #EEE 93.8278472981%, #EEE 100.0%, transparent 100.0%);
-  background-image: linear-gradient(to left, transparent 0, #EEE 0, #EEE 6.1721527019%, transparent 6.1721527019%, transparent 8.5298042998%, #EEE 8.5298042998%, #EEE 14.7019570017%, transparent 14.7019570017%, transparent 17.0596085997%, #EEE 17.0596085997%, #EEE 23.2317613015%, transparent 23.2317613015%, transparent 25.5894128995%, #EEE 25.5894128995%, #EEE 31.7615656014%, transparent 31.7615656014%, transparent 34.1192171993%, #EEE 34.1192171993%, #EEE 40.2913699012%, transparent 40.2913699012%, transparent 42.6490214991%, #EEE 42.6490214991%, #EEE 48.821174201%, transparent 48.821174201%, transparent 51.178825799%, #EEE 51.178825799%, #EEE 57.3509785009%, transparent 57.3509785009%, transparent 59.7086300988%, #EEE 59.7086300988%, #EEE 65.8807828007%, transparent 65.8807828007%, transparent 68.2384343986%, #EEE 68.2384343986%, #EEE 74.4105871005%, transparent 74.4105871005%, transparent 76.7682386985%, #EEE 76.7682386985%, #EEE 82.9403914003%, transparent 82.9403914003%, transparent 85.2980429983%, #EEE 85.2980429983%, #EEE 91.4701957002%, transparent 91.4701957002%, transparent 93.8278472981%, #EEE 93.8278472981%, #EEE 100.0%, transparent 100.0%);
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.4;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: -1; }
-
 html {
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
@@ -396,7 +379,8 @@ body {
 
 h1, h2, h3 {
   font-family: "museo sans", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 700; }
 
 h4 {
   font-weight: normal; }
@@ -410,8 +394,10 @@ a {
   cursor: pointer;
   -webkit-transition: all .2s linear;
           transition: all .2s linear; }
-  a:hover {
-    opacity: .8; }
+
+.slide__column__img {
+  margin-left: auto;
+  margin-right: auto; }
 
 .container {
   max-width: 68em;
@@ -448,31 +434,6 @@ a {
     margin-left: auto;
     margin-right: auto;
     float: none; }
-
-footer {
-  display: block;
-  height: 100px;
-  background-color: #2a2a2a;
-  font-size: 1.125rem;
-  color: #FFF;
-  font-weight: 100;
-  padding-top: 40px;
-  padding-left: 10%; }
-  footer:after {
-    content: "";
-    display: table;
-    clear: both; }
-  footer a {
-    color: #FFF;
-    text-decoration: none;
-    opacity: .7; }
-  footer span {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 14.7019570017%; }
-    footer span:last-child {
-      margin-right: 0; }
 
 .slide {
   display: block;
@@ -556,11 +517,18 @@ footer {
       top: 0;
       height: 100%;
       width: 1px;
-      background-color: #eee; }
+      background-color: #d7d7d7; }
     .slide__column__title {
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      margin-bottom: 15px; }
     .slide__column__content strong {
       font-weight: 500; }
+    .slide__column__img {
+      max-width: 25%;
+      height: 100px;
+      display: block;
+      margin-bottom: 30px;
+      padding: 10px; }
   .slide.white {
     background-color: #FFF;
     color: #2a2a2a; }
@@ -616,9 +584,17 @@ footer {
   .button.red {
     background-color: #f13a21;
     color: #FFF; }
+    .button.red:hover {
+      background-color: #2a2a2a;
+      color: #FFF; }
   .button.black {
     background-color: #2a2a2a;
     color: #FFF; }
+    .button.black:hover {
+      background-color: #FFF;
+      color: #2a2a2a; }
+  .button:hover {
+    box-shadow: 0px 1px 2px #2a2a2a; }
 
 .nav-bar {
   position: fixed;
@@ -677,7 +653,8 @@ footer {
     text-shadow: none; }
     .is-fixed a:not(.button) {
       color: #2a2a2a;
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: normal; }
       .is-fixed a:not(.button):hover {
         color: #f13a21; }
   .is-fixed .button {
@@ -706,6 +683,7 @@ footer {
     height: 100%; }
   .hero__title {
     font-size: 3.25rem;
+    text-shadow: 0 0 6px #111;
     line-height: 1;
     color: #eee; }
     .hero__title::first-line {
@@ -733,3 +711,28 @@ footer {
     left: 0;
     z-index: -1;
     opacity: .9; }
+
+footer {
+  display: block;
+  height: 100px;
+  background-color: #2a2a2a;
+  font-size: 1.125rem;
+  color: #FFF;
+  font-weight: 100;
+  padding-top: 40px;
+  padding-left: 10%; }
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  footer a {
+    color: #FFF;
+    text-decoration: none;
+    opacity: .7; }
+  footer span {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 14.7019570017%; }
+    footer span:last-child {
+      margin-right: 0; }

@@ -55,6 +55,7 @@
     &:not(.button) {
       color: $black;
       font-size: rem(16);
+      font-weight: normal;
       &:hover {
         color: $red;
       }

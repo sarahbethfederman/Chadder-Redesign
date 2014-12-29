@@ -14,9 +14,20 @@
   &.red {
     background-color: $red;
     color: $white;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
   }
   &.black {
     background-color: $black;
     color: $white;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 1px 2px $black;
   }
 }
