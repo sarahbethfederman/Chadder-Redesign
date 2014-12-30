@@ -31,7 +31,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 50 // make up for nav-bar height
           }, 1000);
           return false;
         }

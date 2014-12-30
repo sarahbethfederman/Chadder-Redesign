@@ -1,10 +1,17 @@
 .slide {
   @include row();
-  padding: 60px 10%;
+  padding: 60px 0;
   height: 575px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+  position: relative;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 5%;
+  }
   &__title {
     @include span-columns(6);
     margin-top: 0;
@@ -52,6 +59,7 @@
     clear: both;
     line-height: 1.8;
     margin-bottom: 0;
+    font-weight: 300;
   }
 
   &__column {
@@ -128,9 +136,57 @@
     height: 495px;
     .slide__title {
       font-size: rem(24);
+      margin-bottom: 0;
       &:after {
         display: none;
       }
+    }
+    .slide__column {
+      @include span-columns(6);
+      padding: 0;
+      text-align: left;
+      &:after {
+        display: none;
+      }
+      .slide__content {
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      .slide__title {
+        clear: both;
+      }
+    }
+    form {
+      clear: both;
+    }
+    input, textarea, button {
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    input {
+      width: 49%;
+      &:nth-of-type(2) {
+        margin-left: 2%;
+        float: right;
+      }
+    }
+    textarea {
+      height: 165px;
+    }
+    textarea, button {
+      width: 100%;
+    }
+    button {
+      @extend .button.red;
+      transition: all .3s linear;
+      text-transform: uppercase;
+      font-family: "Museo Sans", sans-serif;
+      font-weight: 700;
     }
   }
 
