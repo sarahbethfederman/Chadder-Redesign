@@ -1,9 +1,3 @@
-
-
-.small-line {
-  font-size: rem(40);
-}
-
 .hero {
   @include row();
   max-height: rem(560);
@@ -36,16 +30,17 @@
     font-family: "museo", sans-serif;
     font-weight: 500;
     font-size: rem(18);
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
   }
   &__content {
-    @include span-columns(8);
+    @include span-columns(7);
     > div {
       clear: both;
     }
   }
   &__img {
     @include span-columns(4);
+    @include shift(1);
     display: block;
     max-width: rem(300);
 

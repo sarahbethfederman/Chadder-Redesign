@@ -10,6 +10,10 @@ footer {
     color: $white;
     text-decoration: none;
     opacity: .7;
+    &:hover {
+      color: $white;
+      opacity: 1;
+    }
   }
   span {
     margin-right: 2%;

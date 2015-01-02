@@ -368,7 +368,17 @@ html {
 
 html {
   -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+       box-sizing: border-box;
+  font-size: 1.2vw; }
+  @media screen and (max-width: 67.5rem) {
+    html {
+      font-size: 1.5vw; } }
+  @media screen and (max-width: 55rem) {
+    html {
+      font-size: 1.8vw; } }
+  @media screen and (max-width: 45rem) {
+    html {
+      font-size: 2vw; } }
 
 *, *:before, *:after {
   -moz-box-sizing: inherit;
@@ -393,9 +403,12 @@ a {
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all .2s linear;
-          transition: all .2s linear; }
+          transition: all .2s linear;
+  color: #f13a21; }
+  a:hover {
+    color: #2a2a2a; }
 
-.quote blockquote, .slide__column__img, .modal__title:after {
+.pullout blockquote, .slide__column__img, .modal__title:after {
   margin-left: auto;
   margin-right: auto; }
 
@@ -410,7 +423,7 @@ a {
     display: table;
     clear: both; }
 
-.quote {
+.pullout {
   display: block;
   background-color: #2a2a2a;
   height: 8.125rem;
@@ -426,14 +439,14 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .quote:after {
+  .pullout:after {
     content: "";
     display: table;
     clear: both; }
-  .quote blockquote {
+  .pullout blockquote {
     width: 60%;
     float: none; }
-  .quote__author {
+  .pullout__caption {
     font-weight: 500; }
 
 .social {
@@ -661,7 +674,8 @@ a {
       background-color: #FFF;
       color: #2a2a2a; }
   .button:hover {
-    box-shadow: 0px 1px 2px #2a2a2a; }
+    box-shadow: 0px 1px 2px #2a2a2a;
+    opacity: 1; }
 
 .slide .button, .nav-bar .button {
   clear: both;
@@ -735,9 +749,6 @@ a {
     padding: 15px;
     margin-top: -2px; }
 
-.small-line {
-  font-size: 2.5rem; }
-
 .hero {
   display: block;
   max-height: 35rem;
@@ -773,14 +784,14 @@ a {
     font-family: "museo", sans-serif;
     font-weight: 500;
     font-size: 1.125rem;
-    margin-bottom: 30px; }
+    margin-bottom: 1.875rem; }
     .hero__subtitle:last-child {
       margin-right: 0; }
   .hero__content {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 65.8807828007%; }
+    width: 57.3509785009%; }
     .hero__content:last-child {
       margin-right: 0; }
     .hero__content > div {
@@ -790,6 +801,7 @@ a {
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%;
+    margin-left: 8.5298042998%;
     display: block;
     max-width: 18.75rem; }
     .hero__img:last-child {
@@ -827,6 +839,9 @@ footer {
     color: #FFF;
     text-decoration: none;
     opacity: .7; }
+    footer a:hover {
+      color: #FFF;
+      opacity: 1; }
   footer span {
     margin-right: 2%; }
 

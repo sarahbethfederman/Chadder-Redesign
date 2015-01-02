@@ -12,7 +12,7 @@
 
     // bind scroll event
     $window.scroll(function() {
-      if ($window.scrollTop() > 100) {
+      if ($window.scrollTop() > 80) {
         if (!isFixed) {
           fixNav();
         }
