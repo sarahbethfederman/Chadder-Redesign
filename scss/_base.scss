@@ -13,7 +13,7 @@ body {
 h1, h2, h3 {
   font-family: "museo sans", sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h4 {
@@ -39,12 +39,13 @@ a {
 .container {
   @include outer-container();
   position: relative;
+  max-width: rem(1200);
 }
 
 .quote {
   @include row();
   background-color: $black;
-  height: 130px;
+  height: rem(130);
   color: $white;
   text-align: center;
   font-family: "museo sans", sans-serif;
@@ -54,12 +55,27 @@ a {
   display: flex;
   align-items: center;
   blockquote {
+    @extend %center;
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
     float: none;
   }
   &__author {
     font-weight: 500;
   }
+}
+
+.social {
+  clear: both;
+  padding-bottom: 10%;
+  width: 90%;
+  border-bottom: 1px solid lighten($black, 60%);
+  margin-bottom: 10%;
+  &__icon {
+    max-width: rem(50);
+    margin-right: rem(15);
+  }
+}
+
+.invest {
+  width: 80%;
 }

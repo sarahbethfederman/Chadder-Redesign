@@ -1,0 +1,37 @@
+    form {
+      clear: both;
+    }
+    input, textarea, button {
+      -webkit-appearance: none;
+      box-shadow: 0px 1px 5px darken($grey, 10%);
+      border: none;
+      border-radius: 3px;
+      padding: rem(8);
+      margin-bottom: rem(10);
+      font-weight: 300;
+      &:focus {
+        outline: 0;
+      }
+    }
+    input {
+      width: 49%;
+      padding: rem(15);
+      &:nth-of-type(2) {
+        margin-left: 2%;
+        float: right;
+      }
+    }
+    textarea {
+      height: rem(165);
+    }
+    textarea, button {
+      width: 100%;
+    }
+    button {
+      @extend .button.red;
+      transition: all .3s linear;
+      text-transform: uppercase;
+      font-family: "Museo Sans", sans-serif;
+      font-weight: 700;
+      padding: rem(15);
+    }

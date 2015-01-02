@@ -1,6 +1,6 @@
 .button {
   float: left;
-  padding: 20px;
+  padding: rem(20);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
     padding: 3px;
   }
   & img {
-    height: 40px;
+    width: 100%;
   }
   &.red {
     background-color: $red;
@@ -36,7 +36,7 @@
 
 .slide .button, .nav-bar .button {
   clear: both;
-  height: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  height: rem(20);
+  margin-top: rem(30);
+  margin-bottom: rem(10);
 }
