@@ -24,14 +24,38 @@
     });
   };
 
-  var smoothScroll = function() {       // smooth scroll from CSS-Tricks
+  // Modal module -- creates a modal window filled with content from a JSON file
+  var Modal = function($trigger, triggerEvent) {
+    var Modal = function() {
+      this.trigger = $trigger;                                    // element that triggers modal
+      this.contentRef = $trigger.data('content');                 // name of content key in JSON
+      this.isActive = false;                                      // is the modal currently active
+
+      if (triggerEvent) {                                         // event that triggers modal
+        this.init(triggerEvent);
+      } else {                                                    // if not included, use click event
+        this.init("click");
+      }
+    }
+
+    Modal.prototype.init = function(triggerEvent) {
+      $trigger.on(triggerEvent, function() {                             // attach event listener
+        console.log("modal created")
+      });
+    }
+
+    return Modal;
+  }();
+
+  // Smooth Scroll from CSS-Tricks
+  var smoothScroll = function($navBar) {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html,body').animate({
-            scrollTop: target.offset().top - 50 // make up for nav-bar height
+            scrollTop: target.offset().top - $navBar.height()     // make up for nav-bar height, so it doesn't cover content
           }, 1000);
           return false;
         }
@@ -41,11 +65,16 @@
 
 
   $(document).ready(function() {
-    // init smooth scroll
-    smoothScroll();
-
     // hook up DOM elements
-    navEffect($('.nav-bar'));
+    var $navBar = $('.nav-bar');
+
+    // init fixed nav effect
+    navEffect($navBar);
+
+    // init smooth scroll
+    smoothScroll($navBar);
+
+    // init modals
   });
 
 })();

@@ -24,7 +24,7 @@
       position: absolute;
       bottom: rem(-20);
       left: 0;
-      width: 10%;
+      width: 2rem;
       height: 2px;
       background-color: $black;
     }
@@ -50,8 +50,8 @@
     &.man {
       left: auto;
       right: 45%;
-      height: rem(650);
-      top: rem(-120);
+      min-height: rem(650);
+      top: rem(-140);
       max-height: rem(800);
     }
   }
