@@ -8,6 +8,7 @@
   float: left;
   margin-top: rem(30);
   transition: all .3s ease-out;
+  backface-visibility: hidden;
 }
 
 .nav-bar__ul {            // .nav-bar ul

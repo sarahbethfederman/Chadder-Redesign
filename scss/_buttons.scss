@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: "museo sans", sans-serif;
   font-size: rem(14);
   &.img {
@@ -28,10 +28,6 @@
       background-color: $white;
       color: $black;
     }
-  }
-  &:hover {
-    box-shadow: 0px 1px 2px $black;
-    opacity: 1;
   }
 }
 

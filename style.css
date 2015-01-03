@@ -565,8 +565,8 @@ a {
       content: '';
       position: absolute;
       right: -5%;
-      top: 0;
-      height: 100%;
+      top: 10%;
+      height: 80%;
       width: 1px;
       background-color: #d7d7d7; }
     .slide__column__title {
@@ -654,7 +654,7 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: "museo sans", sans-serif;
   font-size: 0.875rem; }
   .button.img {
@@ -673,9 +673,6 @@ a {
     .button.black:hover {
       background-color: #FFF;
       color: #2a2a2a; }
-  .button:hover {
-    box-shadow: 0px 1px 2px #2a2a2a;
-    opacity: 1; }
 
 .slide .button, .nav-bar .button {
   clear: both;
@@ -693,7 +690,9 @@ a {
   float: left;
   margin-top: 1.875rem;
   -webkit-transition: all .3s ease-out;
-          transition: all .3s ease-out; }
+          transition: all .3s ease-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
 
 .nav-bar__ul {
   display: -webkit-flex;
@@ -894,7 +893,8 @@ input {
     float: right; }
 
 textarea {
-  height: 10.3125rem; }
+  height: 10.3125rem;
+  padding: 0.9375rem; }
 
 textarea, button {
   width: 100%; }

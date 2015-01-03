@@ -27,21 +27,29 @@
   // Modal module -- creates a modal window filled with content from a JSON file
   var Modal = function($trigger, triggerEvent) {
     var Modal = function() {
-      this.trigger = $trigger;                                    // element that triggers modal
-      this.contentRef = $trigger.data('content');                 // name of content key in JSON
-      this.isActive = false;                                      // is the modal currently active
+      this.trigger = $trigger;                                            // element that triggers modal
+      this.contentRef = $trigger.data('content');                         // name of content key in JSON
+      this.isActive = false;                                              // is the modal currently active
 
-      if (triggerEvent) {                                         // event that triggers modal
+      if (triggerEvent) {                                                 // event that triggers modal
         this.init(triggerEvent);
-      } else {                                                    // if not included, use click event
+      } else {                                                            // if not included, use click event
         this.init("click");
       }
     }
 
     Modal.prototype.init = function(triggerEvent) {
-      $trigger.on(triggerEvent, function() {                             // attach event listener
-        console.log("modal created")
+      var self = this;
+      $trigger.on(triggerEvent, function() {                              // attach event listener
+        console.log("modal created");
+        self.open();
       });
+    }
+
+    Modal.prototype.open = function() {
+      // ajax for the json data
+      // if it exists, create modal div
+      // and put it in the DOM
     }
 
     return Modal;
@@ -63,10 +71,26 @@
     });
   };
 
+  var contactForm = function($formEl) {
+    function validate() {
+
+    };
+
+    $formEl.on("submit", function() {                             // attach client side validation
+        if (validate()) {                                         // if it validates, submit it (via AJAX)
+
+        } else {
+          return false;                                           // don't submit if it doesn't validate
+        }
+    });
+  };
+
 
   $(document).ready(function() {
     // hook up DOM elements
-    var $navBar = $('.nav-bar');
+    var $navBar = $('.nav-bar'),
+        $form = $('.contact-form'),
+        $modalTriggers = $('.js-modal');
 
     // init fixed nav effect
     navEffect($navBar);
@@ -75,6 +99,12 @@
     smoothScroll($navBar);
 
     // init modals
+    $modalTriggers.each(function($el) {
+      new Modal($el);
+    });
+
+    // init contactForm
+    contactForm($form);
   });
 
 })();
