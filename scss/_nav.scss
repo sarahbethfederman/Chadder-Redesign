@@ -7,7 +7,7 @@
   z-index: 100;
   float: left;
   margin-top: rem(30);
-  transition: all .3s ease-out;
+  transition: all .2s ease-out;
   backface-visibility: hidden;
 }
 
@@ -17,7 +17,7 @@
   list-style-type: none;
   align-items: center;
   padding: 0 1rem;
-  font-family: "museo sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-size: rem(18);
   transition: all .3s linear;
   .button {
@@ -41,15 +41,15 @@
 // fixed nav modifier
 .is-fixed {
   background-color: $white;
-  height: 50px;
+  height: rem(50);
   margin: 0;
   box-shadow: 0px 1px 5px darken($grey, 20%);
   .nav-bar__ul {
     margin: 0;
-    padding-top: 13px;
+    padding-top: rem(13);
   }
   .logo {
-    height: 20px;
+    height: rem(20);
   }
   a {
     text-shadow: none;
@@ -64,7 +64,7 @@
   }
   .button {
     font-size: rem(14);
-    padding: 15px;
+    padding: rem(15);
     margin-top: -2px;
   }
 }

@@ -69,17 +69,19 @@
     padding: 0 2%;
     text-align: center;
     position: relative;
-    &:last-of-type {
+    margin-right: 0;
+    &:first-of-type {
       &:after { display: none; } // dont display border on last
     }
     &:after {  // border divider
       content: '';
       position: absolute;
-      right: -5%;
+      left: 0;
       top: 10%;
-      height: 80%;
+      height: rem(200);
       width: 1px;
       background-color: darken($grey, 9%);
+
     }
     &__title {
       font-size: rem(24);

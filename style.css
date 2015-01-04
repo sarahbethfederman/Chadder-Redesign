@@ -388,7 +388,7 @@ body {
   font-family: "museo", sans-serif; }
 
 h1, h2, h3 {
-  font-family: "museo sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   text-transform: uppercase;
   font-weight: 700; }
 
@@ -429,7 +429,7 @@ a {
   height: 8.125rem;
   color: #FFF;
   text-align: center;
-  font-family: "museo sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1.125rem;
@@ -556,17 +556,18 @@ a {
     width: 31.7615656014%;
     padding: 0 2%;
     text-align: center;
-    position: relative; }
+    position: relative;
+    margin-right: 0; }
     .slide__column:last-child {
       margin-right: 0; }
-    .slide__column:last-of-type:after {
+    .slide__column:first-of-type:after {
       display: none; }
     .slide__column:after {
       content: '';
       position: absolute;
-      right: -5%;
+      left: 0;
       top: 10%;
-      height: 80%;
+      height: 12.5rem;
       width: 1px;
       background-color: #d7d7d7; }
     .slide__column__title {
@@ -655,7 +656,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px;
-  font-family: "museo sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-size: 0.875rem; }
   .button.img {
     padding: 3px; }
@@ -689,8 +690,8 @@ a {
   z-index: 100;
   float: left;
   margin-top: 1.875rem;
-  -webkit-transition: all .3s ease-out;
-          transition: all .3s ease-out;
+  -webkit-transition: all .2s ease-out;
+          transition: all .2s ease-out;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
 
@@ -706,7 +707,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  font-family: "museo sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-size: 1.125rem;
   -webkit-transition: all .3s linear;
           transition: all .3s linear; }
@@ -727,14 +728,14 @@ a {
 
 .is-fixed {
   background-color: #FFF;
-  height: 50px;
+  height: 3.125rem;
   margin: 0;
   box-shadow: 0px 1px 5px #bbbbbb; }
   .is-fixed .nav-bar__ul {
     margin: 0;
-    padding-top: 13px; }
+    padding-top: 0.8125rem; }
   .is-fixed .logo {
-    height: 20px; }
+    height: 1.25rem; }
   .is-fixed a {
     text-shadow: none; }
     .is-fixed a:not(.button) {
@@ -745,7 +746,7 @@ a {
         color: #f13a21; }
   .is-fixed .button {
     font-size: 0.875rem;
-    padding: 15px;
+    padding: 0.9375rem;
     margin-top: -2px; }
 
 .hero {
@@ -903,6 +904,6 @@ button {
   -webkit-transition: all .3s linear;
           transition: all .3s linear;
   text-transform: uppercase;
-  font-family: "Museo Sans", sans-serif;
+  font-family: "museo-sans", sans-serif;
   font-weight: 700;
   padding: 0.9375rem; }
