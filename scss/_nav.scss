@@ -9,6 +9,11 @@
   margin-top: rem(30);
   transition: all .2s ease-out;
   backface-visibility: hidden;
+  @media screen and (max-width: $br-2) {
+    background-color: #FFF;
+    margin-top: 0;
+    height: rem(50);
+  }
 }
 
 .nav-bar__ul {            // .nav-bar ul
@@ -30,10 +35,13 @@
   }
   a {
     text-shadow: 0 0 10px #111;
-    transition: all .3s linear;
+    @media screen and (max-width: $br-2) {
+      display: none;
+    }
     &:not(.button) {
       color: $white;
       font-weight: 100;
+      transition: none;
     }
   }
 }

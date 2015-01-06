@@ -134,6 +134,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/people.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 85329,
+		"inputAbbreviatedPath": "\/img\/people.png",
+		"outputAbbreviatedPath": "\/img\/people.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/phones.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -141,6 +152,28 @@
 		"initialSize": 267943,
 		"inputAbbreviatedPath": "\/img\/phones.png",
 		"outputAbbreviatedPath": "\/img\/phones.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/poster.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 65072,
+		"inputAbbreviatedPath": "\/img\/poster.jpg",
+		"outputAbbreviatedPath": "\/img\/poster.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/transparent.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17712,
+		"inputAbbreviatedPath": "\/img\/transparent.png",
+		"outputAbbreviatedPath": "\/img\/transparent.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

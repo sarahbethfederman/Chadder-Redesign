@@ -3,11 +3,11 @@
 // import normalize
 @import "normalize";
 
-// import variables
-@import "variables";
-
 // import Boubon and Neat
 @import "bourbon", "neat";
+
+// import variables
+@import "variables";
 
 // base styles
 @import "base";

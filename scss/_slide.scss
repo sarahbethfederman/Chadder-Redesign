@@ -4,14 +4,22 @@
   height: rem(575);
   overflow: hidden;
   position: relative;
-
-  .container {  // center the content
+  @media screen and (max-width: $br-2) {
+    height: auto;
+  }
+  .container {          // center the content
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 0 2rem;
+    @media screen and (max-width: $br-2) {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__title {
@@ -19,7 +27,7 @@
     margin-top: 0;
     font-size: rem(40);
     position: relative;
-    &:after {   // decorative bars
+    &:after {           // decorative bars
       content: '';
       position: absolute;
       bottom: rem(-20);
@@ -27,6 +35,9 @@
       width: 2rem;
       height: 2px;
       background-color: $black;
+    }
+    @media screen and (max-width: $br-2) {
+      width: 100%;
     }
   }
 
@@ -41,7 +52,10 @@
     left: 60%;
     max-height: rem(500);
     min-height: 100%;
-    top: rem(-70);
+    top: rem(-100);
+    @media screen and (max-width: $br-2) {
+      display: none;
+    }
     &.clock {
       left: auto;
       right: 55%;
@@ -51,7 +65,7 @@
       left: auto;
       right: 45%;
       min-height: rem(650);
-      top: rem(-140);
+      top: -10rem;
       max-height: rem(800);
     }
   }
@@ -62,6 +76,9 @@
     line-height: 1.8;
     margin-bottom: 0;
     font-weight: 300;
+    @media screen and (max-width: $br-2) {
+      @include span-columns(12);
+    }
   }
 
   &__column {
@@ -70,6 +87,11 @@
     text-align: center;
     position: relative;
     margin-right: 0;
+    @media screen and (max-width: $br-2) {
+      @include span-columns(12);
+      margin-bottom: rem(20);
+      margin-top: rem(10);
+    }
     &:first-of-type {
       &:after { display: none; } // dont display border on last
     }
@@ -81,7 +103,9 @@
       height: rem(200);
       width: 1px;
       background-color: darken($grey, 9%);
-
+      @media screen and (max-width: $br-2) {
+        display: none;
+      }
     }
     &__title {
       font-size: rem(24);
@@ -91,6 +115,12 @@
       @include clearfix;
       strong {
         font-weight: 500;
+      }
+      @media screen and (max-width: $br-2) {
+        float: none;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     &__img {
@@ -132,6 +162,16 @@
   // structural modifiers
   &.small {
     height: rem(495);
+    @media screen and (max-width: $br-2) {
+      height: auto;
+    }
+    .slide__img {
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      transform: translateY(-50%);
+      height: 120%;
+    }
     .slide__title {
       font-size: rem(24);
       margin-bottom: rem(8);
@@ -148,11 +188,19 @@
         margin-bottom: rem(30);
       }
       .slide__title { clear: both; }
+      @media screen and (max-width: $br-2) {
+        @include span-columns(12);
+      }
     }
   }
 
   &.right-align {
-    .slide__title, .slide__content, .button { @include shift(6); }
+    .slide__title, .slide__content, .button {
+      @include shift(6);
+      @media screen and (max-width: $br-2) {
+        @include shift(0);
+      }
+    }
   }
 
   &.center-align {

@@ -5,13 +5,21 @@
   position: relative;
   overflow: hidden;
   background-color: rgba(0,0,0, .6);
+  @media screen and (max-width: $br-2) {
+    height: auto;
+    padding-top: rem(60);
+    padding-bottom: rem(30);
+  }
   .red {
     color: $red;
   }
   .container {
     min-height: rem(530);
     height: 100%;
-    padding-left: 5%;
+    padding: 0 5%;
+    @media screen and (max-width: $br-2) {
+      min-height: 0;
+    }
   }
   &__title {
     font-size: rem(70);
@@ -31,11 +39,20 @@
     font-weight: 500;
     font-size: rem(18);
     margin-bottom: rem(30);
+    @media screen and (max-width: $br-2) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__content {
     @include span-columns(7);
     > div {
       clear: both;
+    }
+    @media screen and (max-width: $br-2) {
+      @include span-columns(12);
+      text-align: center;
     }
   }
   &__img {
@@ -43,7 +60,9 @@
     @include shift(1);
     display: block;
     max-width: rem(300);
-
+    @media screen and (max-width: $br-2) {
+      display: none;
+    }
   }
   &__background {
     position: absolute;
@@ -54,6 +73,8 @@
     left: 0;
     z-index: -1;
     opacity: .9;
+    background-image: url('img/poster.jpg');
+    background-size: cover;
   }
   &__CTA__title {
     text-transform: none;
@@ -66,6 +87,10 @@
     margin-bottom: rem(30);
     width: 28%;
     max-width: rem(120);
+    @media screen and (max-width: $br-2) {
+      float: none;
+      display: inline-block;
+    }
   }
 
 }

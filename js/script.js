@@ -83,26 +83,28 @@
       $.ajax({                                  // Submit the form using AJAX.
         type: 'POST',
         url: $form.attr('action'),
-        data: formData
-      }).done(function(response) {              // on success handler
-        $messages.removeClass('error');         // Make sure that the formMessages div has the 'success' class.
-        $messages.addClass('success');
+        data: formData,
+        success: function(response) {              // on success handler
+          $messages.removeClass('error');         // Make sure that the formMessages div has the 'success' class.
+          $messages.addClass('success');
 
-        $messages.text(response);               // Set the message text
+          $messages.text(response);               // Set the message text
 
-        $('[name="name"]').val('');             // Clear the form
-        $('[name="email"]').val('');
-        $('[name="message"]').val('');
-      }).fail(function(data) {                  // on failure handler
-        $messages.removeClass('success');       // Make sure that the formMessages div has the 'error' class
-        $messages.addClass('error');
+          $('[name="name"]').val('');             // Clear the form
+          $('[name="email"]').val('');
+          $('[name="message"]').val('');
+        },
+        error: function(data) {
+          $messages.removeClass('success');       // Make sure that the formMessages div has the 'error' class
+          $messages.addClass('error');
 
-        if (data.responseText !== '') {        // Set the message text
-          $$messages.text(data.responseText);
-        } else {
-          $$messages.text('Oops! An error occured and your message could not be sent.');
+          if (data.responseText !== '') {        // Set the message text
+            $$messages.text(data.responseText);
+          } else {
+            $$messages.text('Oops! An error occured and your message could not be sent.');
+          }
         }
-      }); // end fail
+      });
 
     }); // end submit
   }; // end contactForm

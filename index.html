@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
   <title>Chadder - Stand up for your privacy!</title>
   <script src="//use.typekit.net/esz4pcq.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -9,7 +10,7 @@
 </head>
 <body>
   <span id="top"></span>
-  <div class="top-bar"><p>Hey! We're going to be at CES! Check out our booth.</p></div>
+  <div class="top-bar"><p>Hey! We're going to be at CES! Check out our <a href="#">booth</a>.</p></div>
   <div class="modal">
     <h2 class="modal__title">Modal hello</h2>
   </div>
@@ -43,9 +44,9 @@
         </div><!--end hero content-->
 
       </div><!--end container-->
-      <video class="hero__background" autoplay loop>
+      <video class="hero__background" poster="img/transparent.png" autoplay loop>
         <source src="img/bg.mp4">
-          <!-- ADD FIREFOX-->
+        <source src="img/bg.webm">
       </video>
     </section>
 
@@ -94,7 +95,7 @@
           Many of the "private" applications on the market have access to your data and, in reality, are not very secure.
           We thought it was time someone changed that.
         </p>
-        <a class="button red js-modal" data-content="encryption">Our Encryption Technology</a>
+        <!-- <a class="button red js-modal" data-content="encryption">Our Encryption Technology</a> -->
       </div>
     </section>
 
@@ -106,7 +107,7 @@
           <em>Ghosts shouldn't come back to haunt you.</em> Our Ghosting feature does what it says, securely and reliably.
           Whoever you're messaging &mdash; it's for their eyes only. Once your Ghost expires, it's not coming back.
         </p>
-        <a class="button red js-modal" data-content="ghosts">Learn More</a>
+        <!-- <a class="button red js-modal" data-content="ghosts">Learn More</a> -->
       </div>
     </section>
 
@@ -118,7 +119,7 @@
           Login once and all of your devices will recieve incoming messages and communication, so you can stay updated
           and keep on top of things &mdash; wherever you are. Regardless of what platform you're on, you can count on Chadder.
         </p>
-        <a class="button black js-modal" data-content="syncing">Get Started</a>
+        <!-- <a class="button black js-modal" data-content="syncing">Get Started</a> -->
       </div>
     </section>
 
@@ -130,12 +131,13 @@
           You decide when your message gets deleted. And when you do, we'll make sure it's deleted permanently, from everywhere.
           Including wherever you sent it. Nothing is saved without your permission.
         </p>
-        <a class="button red js-modal" data-content="deletion">Get Started</a>
+        <!-- <a class="button red js-modal" data-content="deletion">Get Started</a> -->
       </div>
     </section>
 
     <section id="about" class="slide small black">
       <div class="container">
+        <img class="slide__img" src="img/people.png" alt="Our Team">
         <h2 class="slide__title">Who We Are</h2>
         <p class="slide__content">
           Chadder was developed by six students from Rochester Institute of Technology.
@@ -169,6 +171,7 @@
           <form class="contact-form" method="POST" action="php/email.php">
             <input name="name" type="text" placeholder="Name" required>
             <input name="email" type="email" placeholder="Email" required>
+            <input name="test-email" type="text" name="text-email" size="25" value="" />
             <textarea name="message" placeholder="Message"></textarea>
             <button type="submit">Submit</button>
           </form>
