@@ -57,7 +57,7 @@
   $name = str_replace(array("\r","\n"),array(" "," "),$name);
   $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
   $message = trim($_POST["message"]);
-  
+
   if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR $_POST["test-email"]) {
         // Set a 400 (bad request) response code and exit
         http_response_code(400);
@@ -66,7 +66,7 @@
   }
 
   // Set the recipient email address
-  $recipient = "sarahbethfederman@gmail.com";
+  $recipient = "lexi@sprague.com";
 
   // Set the email subject.
   $subject = "New contact from $name";
