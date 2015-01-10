@@ -101,7 +101,7 @@
       left: 0;
       top: 10%;
       height: rem(200);
-      width: 1px;
+      width: 2px;
       background-color: darken($grey, 9%);
       @media screen and (max-width: $br-2) {
         display: none;
@@ -118,7 +118,7 @@
       }
       @media screen and (max-width: $br-2) {
         float: none;
-        width: 60%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
       }

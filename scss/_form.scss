@@ -20,6 +20,10 @@
         margin-left: 2%;
         float: right;
       }
+      @media screen and (max-width: $br-2) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
     textarea {
       height: rem(165);

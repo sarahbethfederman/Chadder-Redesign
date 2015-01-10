@@ -375,7 +375,7 @@ html {
       font-size: 1.5vw; } }
   @media screen and (max-width: 56.25em) {
     html {
-      font-size: 3.2vw; } }
+      font-size: 3.7vw; } }
 
 *, *:before, *:after {
   -moz-box-sizing: inherit;
@@ -616,7 +616,7 @@ a {
       left: 0;
       top: 10%;
       height: 12.5rem;
-      width: 1px;
+      width: 2px;
       background-color: #d7d7d7; }
       @media screen and (max-width: 56.25em) {
         .slide__column:after {
@@ -633,7 +633,7 @@ a {
     @media screen and (max-width: 56.25em) {
       .slide__column__content {
         float: none;
-        width: 60%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto; } }
     .slide__column__img {
@@ -1010,6 +1010,10 @@ input {
   input:nth-of-type(2) {
     margin-left: 2%;
     float: right; }
+  @media screen and (max-width: 56.25em) {
+    input {
+      width: 100%;
+      margin-left: 0; } }
 
 textarea {
   height: 10.3125rem;
