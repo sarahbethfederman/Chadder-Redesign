@@ -70,7 +70,8 @@ a {
     width: 60%;
     float: none;
     @media screen and (max-width: $br-2) {
-      width: 100%;
+      width: 90%;
+      font-size: rem(14);
     }
   }
   &__caption {

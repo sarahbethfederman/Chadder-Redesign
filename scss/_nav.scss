@@ -10,11 +10,74 @@
   transition: all .2s ease-out;
   backface-visibility: hidden;
   @media screen and (max-width: $br-2) {
-    background-color: #FFF;
-    margin-top: 0;
-    height: rem(50);
+    display: none;
   }
 }
+.mobile-nav {
+  display: none;
+  margin-top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  text-align: center;
+  .mobile-nav-bar {
+    height: rem(60);
+    background-color: #FFF;
+    padding: rem(15) 0;
+    box-shadow: 0px 1px 5px darken($grey, 20%);
+  }
+  .hamburger {
+    position: absolute;
+    top: rem(15);
+    left: rem(20);
+    img {
+      height: rem(30);
+      width: rem(40);
+    }
+  }
+  .logo-link {
+    display: block;
+    margin-top: rem(5);
+  }
+  .logo {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  li {
+    width: 100%;
+    font-size: rem(14);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: rem(16) 0;
+    display: block;
+    text-align: center;
+    color: $white;
+    background-color: $black;
+    a {
+      width: 100%;
+      display: block;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  &.opened {
+    ul {
+      display: block;
+    }
+  }
+  @media screen and (max-width: $br-2) {
+    display: block;
+  }
+}
+
 
 .nav-bar__ul {            // .nav-bar ul
   display: flex;
@@ -43,6 +106,9 @@
       font-weight: 100;
       transition: none;
     }
+  }
+  @media screen and (max-width: $br-2) {
+    display: none;
   }
 }
 

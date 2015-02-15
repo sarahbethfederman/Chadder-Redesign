@@ -132,6 +132,15 @@
     //   new Modal($(this));
     // });
 
+    // Mobile Nav
+    $('.hamburger').click(function() {
+      $('.mobile-links').slideToggle();
+    });
+
+    $('.mobile-links a').click(function() { 
+        $('.mobile-links').slideUp();
+    });
+
 
     // init contactForm
     contactForm($form, $formMessages);
