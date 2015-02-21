@@ -91,6 +91,9 @@
       float: none;
       display: inline-block;
     }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
 }

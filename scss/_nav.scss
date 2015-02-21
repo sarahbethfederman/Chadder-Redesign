@@ -30,8 +30,9 @@
   }
   .hamburger {
     position: absolute;
-    top: rem(15);
-    left: rem(20);
+    top: 0;
+    left: 0;
+    padding: rem(15);
     img {
       height: rem(30);
       width: rem(40);
