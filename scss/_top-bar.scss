@@ -1,0 +1,16 @@
+.top-bar {
+  @include row();
+  height: rem(45);
+  background-color: $red;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: $white;
+  z-index: 100;
+  display: none;
+  p {
+    padding-left: 5%;
+    margin-top: rem(15);
+    font-size: rem(16);
+  }
+}

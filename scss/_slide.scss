@@ -1,0 +1,216 @@
+.slide {
+  @include row();
+  padding: rem(60) 0;
+  height: rem(575);
+  overflow: hidden;
+  position: relative;
+  @media screen and (max-width: $br-2) {
+    height: auto;
+  }
+  .container {          // center the content
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 2rem;
+    @media screen and (max-width: $br-2) {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    @include span-columns(6);
+    margin-top: 0;
+    font-size: rem(40);
+    position: relative;
+    &:after {           // decorative bars
+      content: '';
+      position: absolute;
+      bottom: rem(-20);
+      left: 0;
+      width: 2rem;
+      height: 2px;
+      background-color: $black;
+    }
+    @media screen and (max-width: $br-2) {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(18);
+    font-weight: 100;
+    margin-bottom: rem(60);
+  }
+
+  &__img {
+    position: absolute;
+    left: 60%;
+    max-height: rem(500);
+    min-height: 100%;
+    top: rem(-100);
+    @media screen and (max-width: $br-2) {
+      display: none;
+    }
+    &.clock {
+      left: auto;
+      right: 55%;
+      top: rem(-60)px;
+    }
+    &.man {
+      left: auto;
+      right: 45%;
+      min-height: rem(650);
+      top: -10rem;
+      max-height: rem(800);
+    }
+  }
+
+  &__content {
+    @include span-columns(6);
+    clear: both;
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-weight: 300;
+    @media screen and (max-width: $br-2) {
+      @include span-columns(12);
+    }
+  }
+
+  &__column {
+    width: 33%;
+    float: left;
+    padding: 0 3%;
+    text-align: center;
+    position: relative;
+    margin-right: 0;
+    @media screen and (max-width: $br-2) {
+      @include span-columns(12);
+      margin-bottom: rem(20);
+      margin-top: rem(10);
+    }
+    &:first-of-type {
+      &:after { display: none; } // dont display border on last
+    }
+    &:after {  // border divider
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: rem(200);
+      width: 2px;
+      background-color: darken($grey, 9%);
+      @media screen and (max-width: $br-2) {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: rem(24);
+      margin-bottom: rem(15);
+    }
+    &__content {
+      @include clearfix;
+      strong {
+        font-weight: 500;
+      }
+      @media screen and (max-width: $br-2) {
+        float: none;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &__img {
+      @extend %center;
+      max-width: 25%;
+      height: rem(100);
+      display: block;
+      margin-bottom: rem(30);
+      padding: rem(10);
+    }
+  }
+
+  // color modifiers
+  &.white {
+    background-color: $white;
+    color: $black;
+  }
+  &.grey {
+    background-color: $grey;
+    color: $black;
+  }
+  &.black {
+    background-color: $black;
+    color: $white;
+    .slide__title:after { background-color: $white; }
+    .button {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+  &.red {
+    background-color: $red;
+    color: $white;
+    .slide__title:after { background-color: $white; }
+  }
+
+  // structural modifiers
+  &.small {
+    height: rem(495);
+    @media screen and (max-width: $br-2) {
+      height: auto;
+    }
+    .slide__img {
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      transform: translateY(-50%);
+      height: 120%;
+    }
+    .slide__title {
+      font-size: rem(24);
+      margin-bottom: rem(8);
+      &:after { display: none; }
+    }
+    .slide__column {
+      @include span-columns(6);
+      padding: 0;
+      text-align: left;
+      &:after { display: none; }
+      .slide__content {
+        width: auto;
+        margin-top: 0;
+        margin-bottom: rem(30);
+      }
+      .slide__title { clear: both; }
+      @media screen and (max-width: $br-2) {
+        @include span-columns(12);
+      }
+    }
+  }
+
+  &.right-align {
+    .slide__title, .slide__content, .button {
+      @include shift(6);
+      @media screen and (max-width: $br-2) {
+        @include shift(0);
+      }
+    }
+  }
+
+  &.center-align {
+    text-align: center;
+    .slide__title {
+      @include span-columns(12);
+      margin-bottom: rem(10);
+      &:after { display: none; }
+    }
+  }
+
+} // end .slide

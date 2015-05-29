@@ -1,0 +1,21 @@
+footer {
+  height: rem(100);
+  background-color: $black;
+  font-size: rem(18);
+  color: $white;
+  font-weight: 100;
+  padding-top: rem(40);
+  .container { padding-left: 2rem; }
+  a {
+    color: $white;
+    text-decoration: none;
+    opacity: .7;
+    &:hover {
+      color: $white;
+      opacity: 1;
+    }
+  }
+  span {
+    margin-right: 2%;
+  }
+}

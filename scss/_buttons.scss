@@ -1,0 +1,43 @@
+.button {
+  float: left;
+  padding: rem(20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-family: "museo-sans", sans-serif;
+  font-size: rem(14);
+  &.img {
+    padding: 3px;
+  }
+  & img {
+    width: 100%;
+  }
+  &.red {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  &.black {
+    background-color: $black;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.slide .button, .nav-bar .button {
+  clear: both;
+  height: rem(20);
+  margin-top: rem(30);
+  margin-bottom: rem(10);
+}
+
+#download .button {
+  
+}

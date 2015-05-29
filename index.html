@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Chadder - Stand up for your privacy!</title>
+  <script src="//use.typekit.net/esz4pcq.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <link href="style.css" rel="stylesheet">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-59542711-1', 'auto');
+   ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+  <span id="top"></span>
+
+  <!-- Modals-->
+  <div class="modal">
+    <a class="modal__close"><img src="img/close.svg"></a>
+
+    <h2 class="modal__title"></h2>
+
+    <div class="modal__content">
+    </div>
+  </div>
+  <!-- end Modal -->
+
+  <header class="nav-bar">
+      <nav class="container">
+        <ul class="nav-bar__ul">
+          <li><a href="#top"><img class="logo" src="img/logo.svg" alt="Chadder"></a></li>
+          <li><a href="#features">About Chadder</a></li>
+          <li><a href="#about">Who We Are</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="button red" href="#download">Download</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="mobile-nav">
+    <div class="mobile-nav-bar">
+      <a class="hamburger"><img src="img/hamburger.svg" alt="menu"></a>
+      <a class="logo-link" href="#top"><img class="logo" src="img/logo.svg" alt="Chadder"></a>
+    </div>
+    <ul class="mobile-links">
+      <li><a href="#features">About Chadder</a></li>
+      <li><a href="#about">Who We Are</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img class="hero__img" src="img/iphone.png" alt="iphone screenshot">
+
+        <div class="hero__content">
+          <h1 class="hero__title">Stand up for<br> your <span class="red">privacy</span></h1>
+          <h2 class="hero__subtitle">Chadder is a modern messaging app, built with your interests at heart.</h2>
+
+          <div id="download">
+            <h3 class="hero__CTA__title">Download Now:</h3>
+            <a class="button red img" href="https://play.google.com/store/apps/details?id=com.etransfr.chadder" target="_blank"><img src="img/googleplay.png" alt="Download on google play"></a>
+            <a class="button red img" href="http://www.windowsphone.com/en-us/store/app/chadder/a64b40dd-d06b-4a18-90d3-ddd1624c0212" target="_blank"><img src="img/windowsstore.png" alt="Download on Windows"></a>
+            <a class="button red img" href="https://itunes.apple.com/us/app/chadder/id921007599?ls=1&mt=8" target="_blank"><img src="img/appstore.png" alt="Download on iOS"></a>
+          </div><!--end downlaod -->
+        </div><!--end hero content-->
+
+      </div><!--end container-->
+      <video class="hero__background" poster="img/transparent.png" autoplay loop>
+        <source src="img/bg.mp4">
+        <source src="img/bg.webm">
+      </video>
+    </section>
+
+    <section class="pullout">
+      <div class="container">
+        <blockquote>"I use Chadder everyday with the trust that all of my information and communication is, in fact, truly private." <span class="pullout__caption">- John McAfee</span></blockquote>
+      </div>
+    </section>
+
+    <section id="features" class="slide white center-align">
+      <div class="container">
+        <h2 class="slide__title">Share Your Story &mdash; Securely</h2>
+        <h4 class="slide__subtitle">Say what you want, we can't see it anyway!</h4>
+
+        <div class="slide__column">
+          <img class="slide__column__img" src="img/lock.svg" alt="lock icon">
+          <h3 class="slide__column__title">Real</h3>
+          <p class="slide__column__content">
+            We use <strong>state-of-the-art encryption</strong> to protect your information and communications
+          </p>
+        </div>
+
+        <div class="slide__column">
+          <img class="slide__column__img" src="img/pointer.svg" alt="pointer icon">
+          <h3 class="slide__column__title">Easy</h3>
+          <p class="slide__column__content">
+            Our <strong>cross-platform</strong> application has an easy and intuitive interface on all devices
+          </p>
+        </div>
+
+        <div class="slide__column">
+          <img class="slide__column__img" src="img/ghost.svg" alt="ghost icon">
+          <h3 class="slide__column__title">Fun</h3>
+          <p class="slide__column__content">
+            Privacy is just the tip of the iceberg! Our app is full of <strong>fun features</strong> like Ghosting
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide left-align black">
+      <div class="container">
+        <img class="slide__img" src="img/briefcase.png" alt="briefcase">
+        <h2 class="slide__title">Encryption<br>for Everyone</h2>
+        <p class="slide__content">
+          Many of the "private" applications on the market have access to your data and, in reality, are not very secure.
+          We thought it was time someone changed that.
+        </p>
+        <a class="button red js-modal" data-content="encryption">Our Encryption Technology</a>
+      </div>
+    </section>
+
+    <section class="slide right-align grey">
+      <div class="container">
+        <img class="slide__img clock" src="img/clock.png" alt="timebomb">
+        <h2 class="slide__title">Disappearing<br>Messages</h2>
+        <p class="slide__content">
+          <em>Ghosts shouldn't come back to haunt you.</em> Our Ghosting feature does what it says, securely and reliably.
+          Whoever you're messaging &mdash; it's for their eyes only. Once your Ghost expires, it's not coming back.
+        </p>
+        <!-- <a class="button red js-modal" data-content="ghosts">Learn More</a> -->
+      </div>
+    </section>
+
+    <section class="slide left-align red">
+      <div class="container">
+        <img class="slide__img phones" src="img/phones.png" alt="phones">
+        <h2 class="slide__title">Automatic<br>Syncing &amp; Updates</h2>
+        <p class="slide__content">
+          Login once and all of your devices will recieve incoming messages and communication, so you can stay updated
+          and keep on top of things &mdash; wherever you are. Regardless of what platform you're on, you can count on Chadder.
+        </p>
+        <!-- <a class="button black js-modal" data-content="syncing">Get Started</a> -->
+      </div>
+    </section>
+
+    <section class="slide right-align white">
+      <div class="container">
+        <img class="slide__img man" src="img/man-phone.png" alt="man holding phone">
+        <h2 class="slide__title">Your Chats,<br>Your Control</h2>
+        <p class="slide__content">
+          You decide when your message gets deleted. And when you do, we'll make sure it's deleted permanently, from everywhere.
+          Including wherever you sent it. Nothing is saved without your permission.
+        </p>
+        <!-- <a class="button red js-modal" data-content="deletion">Get Started</a> -->
+      </div>
+    </section>
+
+    <section id="about" class="slide small black">
+      <div class="container">
+        <img class="slide__img" src="img/people.png" alt="Our Team">
+        <h2 class="slide__title">Who We Are</h2>
+        <p class="slide__content">
+          Chadder was developed by six students from Rochester Institute of Technology.
+          We have worked hard to build an application that is balanced between fun &amp; private.
+        </p>
+        <a class="button red" href="https://chadderforall.weebly.com/" target="_blank">Visit the Blog</a>
+      </div>
+    </section>
+
+    <section id="contact" class="slide small grey">
+      <div class="container">
+        <div class="slide__column">
+          <h3 class="slide__title">Social</h3>
+          <h4 class="slide__content">Find us on our social media!</h4>
+
+          <div class="social">
+            <a href="https://www.facebook.com/ChadderForAll" target="_blank"><img class="social__icon" src="img/facebook.svg" alt="facebook"></a>
+            <a href="https://twitter.com/ChadderForAll" target="_blank"><img class="social__icon" src="img/twitter.svg" alt="twitter"></a>
+          </div>
+
+          <div class="invest">
+            <h3 class="slide__title">Investors</h3>
+            <h4 class="slide__content">If you're interested in funding, check out our <a href="https://www.crowdfunder.com/etransfr" target="_blank">Crowdfunder page!</a> Please feel free to contact us with any questions.</h4>
+          </div>
+
+        </div>
+        <div class="slide__column">
+          <h3 class="slide__title">Contact Us</h3>
+          <h4 class="slide__content">We want to hear your thoughts!</h4>
+
+          <form class="contact-form" method="POST" action="php/email.php">
+            <input name="name" type="text" placeholder="Name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="test-email" type="text" name="text-email" size="25" value="" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+
+          <div id="form-messages"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2014 Etransfr</span>
+      <span><a href="https://chadderforall.weebly.com/privacy-policy.html" target="_blank">Privacy Policy</a></span>
+    </div>
+  </footer>
+
+  <!-- // <script src="js/jquery.js"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- // <script src="js/script.js"></script> -->
+  <script src="js/min/script-min.js"></script>
+</body>
+</html>
